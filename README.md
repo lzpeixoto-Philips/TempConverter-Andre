@@ -1,4 +1,5 @@
-# TempConverter
+# TempConverter nao terminado! build nao deu certo, e so voltei tudo 
+
 
 Repositório para criação do projeto de conversor de temperatura.
 
