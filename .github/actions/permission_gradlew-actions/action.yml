@@ -5,3 +5,4 @@ runs:
     steps:
       - name : Set Permission Gradlew
         run: chmod +x ./gradlew
+        shell: bash

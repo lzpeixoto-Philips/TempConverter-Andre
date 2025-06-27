@@ -5,3 +5,4 @@ runs:
   steps:
     - name: Build With Gradle
       run: ./gradlew build
+      shell: bash

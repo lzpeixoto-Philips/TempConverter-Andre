@@ -6,3 +6,4 @@ runs:
   steps:
     - name: Diga ola
       run: echo "ola"
+      shell: bash
