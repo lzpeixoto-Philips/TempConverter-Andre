@@ -28,4 +28,5 @@ jobs:
       - name: Set Gradle Permission
         uses: ./.github/actions/set-gradlew-permission-action
 
-      - uses: ./.github/actions/build-project-action
+      - name: build project
+        uses: ./.github/actions/build-project-action
