@@ -1,0 +1,7 @@
+name: Permission gradlew
+
+runs:
+    using: "composite"
+    steps:
+      - name : Set Permission Gradlew
+        run: chmod +x ./gradlew

@@ -1,0 +1,7 @@
+name: build project
+
+runs:
+  using: "composite"
+  steps:
+    - name: Build With Gradle
+      run: ./gradlew build
