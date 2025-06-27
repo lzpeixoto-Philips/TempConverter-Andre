@@ -30,4 +30,6 @@ public class Conversor {
             throw new IllegalArgumentException("Tipo inválido. Use 'C' para Celsius ou 'F' para Fahrenheit.");
         }
     }
+
+
 }
