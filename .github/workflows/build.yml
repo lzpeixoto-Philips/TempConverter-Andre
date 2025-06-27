@@ -26,6 +26,6 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
 
       - name: Set Gradle Permission
-        uses: ./.github/actions/permission-gradlew-action
+        uses: ./.github/actions/set-gradlew-permission-action
 
-      - uses: ./.github/actions/build-projeto-action
+      - uses: ./.github/actions/build-project-action
