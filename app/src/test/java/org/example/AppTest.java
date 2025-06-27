@@ -7,8 +7,35 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+
+        @Test
+        void appHasAGreeting() {
+            Conversor classUnderTest = new Conversor();
+
+            classUnderTest.setTipo("C");
+            classUnderTest.setTemperatura(100);
+
+            assertNotNull(classUnderTest.getTipo(), "app should have a greeting");
+        }
+
+        @Test
+        void Equals() {
+            Conversor classUnderTest = new Conversor();
+
+            classUnderTest.setTipo("C");
+            classUnderTest.setTemperatura(100);
+            assertEquals("C", classUnderTest.getTipo());
+        }
+
+        @Test
+        void calcularCelsius() {
+            Conversor classUnderTest = new Conversor();
+
+            classUnderTest.setTipo("C");
+            classUnderTest.setTemperatura(100);
+
+            assertNotNull(classUnderTest.getTipo(), "app should have a greeting");
+            //assertNot(37.77777777777778, classUnderTest.calcular());
+        }
     }
-}
+

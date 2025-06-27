@@ -2,28 +2,32 @@ package org.example;
 import java.awt.*;
 import java.util.Scanner;
 public class Conversor {
-    public static void main(String[] args) {
-        Scanner teclado = new Scanner(System.in);
+    private double temperatura;
+    private String tipo;
 
-        System.out.println("Insira para qual deseja converter:");
-        System.out.println("1 - Celsius");
-        System.out.println("2 - Fahrenheit");
-        int opcao = teclado.nextInt();
+    public double getTemperatura() {
+        return temperatura;
+    }
 
-        if (opcao == 1){
-            System.out.println("Insira o graus em Fahrenheit: ");
-            double Fahrenheit = teclado.nextDouble();
-            double Celsius = (Fahrenheit - 32) * 5.0 / 9;
-            System.out.println("O graus em Celsius: " + Celsius );
+    public void setTemperatura(double temperatura) {
+        this.temperatura = temperatura;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public double calcular() {
+        if (tipo.equals("C")) {
+            return (temperatura - 32) * 0.55; // Fahrenheit to Celsius
+        } else if (tipo.equals("F")) {
+            return (temperatura * 1.8) + 32; // Celsius to Fahrenheit
+        } else {
+            throw new IllegalArgumentException("Tipo inválido. Use 'C' para Celsius ou 'F' para Fahrenheit.");
         }
-        if (opcao == 2){
-            System.out.println("Insira o graus em Celsius: ");
-            double Celsius = teclado.nextDouble();
-            double Fahrenheit =(Celsius * 1.8) + 32;
-            System.out.println("O graus em Fahrenheit: " + Fahrenheit );
-        }else if (opcao != 1 && opcao != 2){
-            System.out.println("Opção inválida!");
-        }
-        teclado.close();
     }
 }
