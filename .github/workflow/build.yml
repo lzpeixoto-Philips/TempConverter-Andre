@@ -4,19 +4,15 @@ on:
     branches:
       - main
 jobs:
-  checkout:
-      runs-on: ubuntu-lastest
-      steps:
-          -name: Checkout
   DigaOla:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Diga ola
-        -uses: ./.github/actions/diga-ola-action
+        uses: ./.github/actions/diga-ola-action
 
-      
+
   Build:
     runs-on: ubuntu-latest
     steps:
